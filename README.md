@@ -14,7 +14,7 @@ There are two parts:-
   - Classification. Also, a comparison between ViTs and CNNS
   - Segmentation using Mask RCNNs
   
- ![__results___11_0](https://user-images.githubusercontent.com/64341057/230724568-c2167763-ce1a-4c6e-9cc9-d238aca329e3.png)
+<img src="https://user-images.githubusercontent.com/64341057/230724568-c2167763-ce1a-4c6e-9cc9-d238aca329e3.png" height="500" width="500">
 
   
 ## Datasets
@@ -36,7 +36,7 @@ During the training phase, the weights of the filters in the convolutional layer
 
 CNNs have achieved state-of-the-art performance in many computer vision tasks, such as image classification, object detection, and semantic segmentation. They are widely used in various applications, such as autonomous driving, medical imaging, and facial recognition.
 
-![__results___22_1](https://user-images.githubusercontent.com/64341057/230724661-8f5ed3ec-5500-47b6-bd26-d237ccc859b3.png)
+<img src="https://user-images.githubusercontent.com/64341057/230724661-8f5ed3ec-5500-47b6-bd26-d237ccc859b3.png" width="250" height="250">
 
 
 ### ViT
@@ -82,7 +82,7 @@ The ViT model is composed of multiple Transformer blocks, which use the layers.M
 
 In contrast to the technique described in the original ViT paper, which adds a learnable embedding to the sequence of encoded patches to serve as the image representation, all the outputs of the final Transformer block are reshaped with the layers.Flatten() function and used as the image representation input to the classifier head. This approach is more efficient and simplifies the architecture of the model. However, in cases where the number of patches and the projection dimensions are large, the layers.GlobalAveragePooling1D layer can be used instead to aggregate the outputs of the Transformer block. This can help reduce the number of parameters in the model and improve its generalization performance.
 
-![__results___40_1](https://user-images.githubusercontent.com/64341057/230724667-2c4a901f-9132-4c23-beab-692560e26e76.png)
+<img src="https://user-images.githubusercontent.com/64341057/230724667-2c4a901f-9132-4c23-beab-692560e26e76.png" width="250" height="250">
 
 
 ### CNNs Vs ViT - Conclusion
