@@ -41,7 +41,7 @@ CNNs have achieved state-of-the-art performance in many computer vision tasks, s
 
 ### ViT
 
-![vision-transformer](https://user-images.githubusercontent.com/64341057/230724461-36f69ee0-27e9-49cd-85df-08ca3b28d141.png)
+<img src="https://user-images.githubusercontent.com/64341057/230724461-36f69ee0-27e9-49cd-85df-08ca3b28d141.png" height="250" width="250">
 
 
 The Vision Transformer (ViT) is a state-of-the-art deep learning model for image recognition, introduced in 2020 by Dosovitskiy et al. Unlike traditional Convolutional Neural Networks (CNNs), ViT uses a transformer architecture, which was originally developed for natural language processing tasks.
@@ -55,8 +55,6 @@ To enable the model to perform classification tasks, ViT adds a classification h
 ViT has achieved state-of-the-art performance on several benchmark image recognition datasets, including ImageNet and CIFAR-100. It has also been shown to generalize well to unseen data and outperform CNNs with a comparable number of parameters. However, ViT requires more computational resources than CNNs, especially for large-scale datasets, and may be less interpretable due to its complex attention mechanism.
 
 #### ViT Architecture.
-
-![vision-transformer](https://user-images.githubusercontent.com/64341057/230724471-abd07a9f-222a-4b1e-9f49-df3febfbd9df.png)
 
 
 ##### Multi-layer perceptron
