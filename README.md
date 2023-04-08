@@ -10,6 +10,9 @@ Malignant brain tumors, on the other hand, grow quickly and can invade nearby he
 There are two parts:-
   - Classification. Also, a comparison between ViTs and CNNS
   - Segmentation using Mask RCNNs
+  
+## Datasets
+Kaggle: https://www.kaggle.com/datasets/navoneel/brain-mri-images-for-brain-tumor-detection
 
 ## Part 1 - Classification. A comparative Study between ViTs and CNNs.
 ### CNN
@@ -68,3 +71,13 @@ ViTs, on the other hand, have shown very promising results for image recognition
 However, ViTs also have some limitations. One of the main drawbacks is that they may not capture fine-grained spatial details as well as CNNs, which are specifically designed to learn local and translation-invariant features. They may also be less effective for tasks that require a lot of data augmentation, as the patches used as input to the model may not capture all the relevant details in the image. Additionally, ViTs may require more computational resources than CNNs, especially for larger image sizes and patch resolutions.
 
 ## Part 2 - Segmentation using Mask RCNNs
+
+### What is Mask RCNN?
+Mask R-CNN is a deep learning model for object detection and instance segmentation, which extends the popular Faster R-CNN model by adding a third branch for predicting object masks. In Mask R-CNN, the model is trained to predict bounding boxes, class labels, and pixel-level masks for each object in an image.
+
+The model consists of a backbone network, such as ResNet or VGG, followed by a Region Proposal Network (RPN) that generates a set of candidate object proposals. These proposals are then refined using a Region of Interest (RoI) pooling layer, which extracts a fixed-size feature map for each proposal. The extracted features are then fed into two separate fully connected branches for object classification and bounding box regression, and a third fully connected branch for mask prediction.
+
+The mask prediction branch in Mask R-CNN uses a fully convolutional network to predict a binary mask for each RoI, where the value of each pixel in the mask corresponds to the probability that the pixel belongs to the object. The predicted masks are then used to perform instance segmentation, which involves separating each object instance in the image and assigning a unique label to each pixel belonging to that instance.
+
+Mask R-CNN has achieved state-of-the-art performance on several benchmark datasets for object detection and instance segmentation, and is widely used in various computer vision applications, including robotics, autonomous vehicles, and medical image analysis.
+
