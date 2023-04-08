@@ -1,6 +1,9 @@
 # Brain-Tumor-Detection-and-Segmentation
 ## What are Brain Tumors?
 
+![download (17)](https://user-images.githubusercontent.com/64341057/230724439-4c96da6f-75aa-4438-bd61-bfc4aa28d9a1.jpeg)
+
+
 A brain tumor is an abnormal growth of cells within the brain or surrounding tissues. Brain tumors can be either benign (non-cancerous) or malignant (cancerous), and they can occur at any age.
 
 Benign brain tumors grow slowly, have clear borders and do not spread to other parts of the body. However, even a benign brain tumor can cause serious health problems if it grows in a critical area of the brain or becomes too large.
@@ -11,11 +14,18 @@ There are two parts:-
   - Classification. Also, a comparison between ViTs and CNNS
   - Segmentation using Mask RCNNs
   
+ ![__results___11_0](https://user-images.githubusercontent.com/64341057/230724568-c2167763-ce1a-4c6e-9cc9-d238aca329e3.png)
+
+  
 ## Datasets
 Kaggle: https://www.kaggle.com/datasets/navoneel/brain-mri-images-for-brain-tumor-detection
 
 ## Part 1 - Classification. A comparative Study between ViTs and CNNs.
 ### CNN
+
+![download (18)](https://user-images.githubusercontent.com/64341057/230724450-d532189e-c8b2-43b8-9707-92af74d5e98c.jpeg)
+
+
 CNN stands for Convolutional Neural Network, which is a type of deep learning algorithm commonly used for image and video processing tasks. CNNs are designed to automatically learn and extract relevant features from input images and classify them into different categories.
 
 The basic architecture of a CNN consists of several layers, including convolutional layers, pooling layers, and fully connected layers. In the convolutional layer, a set of learnable filters are applied to the input image to produce a feature map, which captures the presence of specific features such as edges, lines, and textures. The pooling layer then reduces the spatial size of the feature map by down-sampling, which helps to reduce the computational cost and prevent overfitting.
@@ -26,7 +36,14 @@ During the training phase, the weights of the filters in the convolutional layer
 
 CNNs have achieved state-of-the-art performance in many computer vision tasks, such as image classification, object detection, and semantic segmentation. They are widely used in various applications, such as autonomous driving, medical imaging, and facial recognition.
 
+![__results___22_1](https://user-images.githubusercontent.com/64341057/230724661-8f5ed3ec-5500-47b6-bd26-d237ccc859b3.png)
+
+
 ### ViT
+
+![vision-transformer](https://user-images.githubusercontent.com/64341057/230724461-36f69ee0-27e9-49cd-85df-08ca3b28d141.png)
+
+
 The Vision Transformer (ViT) is a state-of-the-art deep learning model for image recognition, introduced in 2020 by Dosovitskiy et al. Unlike traditional Convolutional Neural Networks (CNNs), ViT uses a transformer architecture, which was originally developed for natural language processing tasks.
 
 The transformer architecture consists of several layers of self-attention and feedforward networks. In the self-attention layer, the input sequence is mapped to a set of queries, keys, and values, which are then used to compute a weighted sum of the values based on their relevance to each query. This allows the model to attend to different parts of the input sequence and capture long-range dependencies.
@@ -38,6 +55,10 @@ To enable the model to perform classification tasks, ViT adds a classification h
 ViT has achieved state-of-the-art performance on several benchmark image recognition datasets, including ImageNet and CIFAR-100. It has also been shown to generalize well to unseen data and outperform CNNs with a comparable number of parameters. However, ViT requires more computational resources than CNNs, especially for large-scale datasets, and may be less interpretable due to its complex attention mechanism.
 
 #### ViT Architecture.
+
+![vision-transformer](https://user-images.githubusercontent.com/64341057/230724471-abd07a9f-222a-4b1e-9f49-df3febfbd9df.png)
+
+
 ##### Multi-layer perceptron
 MLP stands for Multilayer Perceptron, which is a type of feedforward neural network consisting of multiple layers of neurons, including an input layer, one or more hidden layers, and an output layer. MLPs are commonly used for a wide range of machine learning tasks, including classification, regression, and time series forecasting.
 
@@ -61,6 +82,9 @@ The ViT model is composed of multiple Transformer blocks, which use the layers.M
 
 In contrast to the technique described in the original ViT paper, which adds a learnable embedding to the sequence of encoded patches to serve as the image representation, all the outputs of the final Transformer block are reshaped with the layers.Flatten() function and used as the image representation input to the classifier head. This approach is more efficient and simplifies the architecture of the model. However, in cases where the number of patches and the projection dimensions are large, the layers.GlobalAveragePooling1D layer can be used instead to aggregate the outputs of the Transformer block. This can help reduce the number of parameters in the model and improve its generalization performance.
 
+![__results___40_1](https://user-images.githubusercontent.com/64341057/230724667-2c4a901f-9132-4c23-beab-692560e26e76.png)
+
+
 ### CNNs Vs ViT - Conclusion
 CNNs have been the state-of-the-art for image recognition tasks for many years, and are known to be highly effective at capturing local and translation-invariant features in images. They are particularly good at identifying fine-grained details, such as edges and textures, and can learn to recognize complex patterns in large datasets. One of the main advantages of CNNs is that they require relatively few parameters compared to other deep learning models, which makes them faster to train and easier to deploy.
 
@@ -73,6 +97,9 @@ However, ViTs also have some limitations. One of the main drawbacks is that they
 ## Part 2 - Segmentation using Mask RCNNs
 
 ### What is Mask RCNN?
+![download (19)](https://user-images.githubusercontent.com/64341057/230724513-199fde98-43b2-4069-b018-889fade46a74.jpeg)
+
+
 Mask R-CNN is a deep learning model for object detection and instance segmentation, which extends the popular Faster R-CNN model by adding a third branch for predicting object masks. In Mask R-CNN, the model is trained to predict bounding boxes, class labels, and pixel-level masks for each object in an image.
 
 The model consists of a backbone network, such as ResNet or VGG, followed by a Region Proposal Network (RPN) that generates a set of candidate object proposals. These proposals are then refined using a Region of Interest (RoI) pooling layer, which extracts a fixed-size feature map for each proposal. The extracted features are then fed into two separate fully connected branches for object classification and bounding box regression, and a third fully connected branch for mask prediction.
@@ -81,3 +108,5 @@ The mask prediction branch in Mask R-CNN uses a fully convolutional network to p
 
 Mask R-CNN has achieved state-of-the-art performance on several benchmark datasets for object detection and instance segmentation, and is widely used in various computer vision applications, including robotics, autonomous vehicles, and medical image analysis.
 
+### Some Results
+![__results___27_1](https://user-images.githubusercontent.com/64341057/230725278-8c6ca150-13e6-4c91-b6bf-23117bfcd0db.png)
